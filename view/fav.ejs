@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<%- include ('./layout/head.ejs') %>
+
+
+    <% include ('./layout/nav.ejs') %>
+<body>
+    <% favChara.forEach (qoute =>{ %>
+        <p>
+            <%= qoute.quote %>
+        </p>
+        <p>
+            <%= qoute.character  %>
+        </p>
+        <p>
+            <%= qoute.image  %>
+        </p>
+        <p>
+            <%= qoute.characterDirection  %>
+        </p>
+
+  <%  }) %>
+  <a href="/charachter/<%=qoute.id%>">view details</a>
+</main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:#fefb1e ;
+}
+main {
+    background-color:#62C8E4;
+    font-family: sans-serif;
+}

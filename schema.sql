@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS users
+CREATE TABLE 
+
+users (
+  id SERIAL PRIMARY KEY NOT NULL,
+  quote VARCHAR(256) NOT NULL,
+  character VARCHAR(256) NOT NULL,
+  image VARCHAR(225),
+  characterDirection VARCHAR(255)
+
+)

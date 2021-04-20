@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('./layout/head.ejs') %>
+
+
+    <% include ('./layout/nav.ejs') %>
+    <main>
+    <% detaliesChara.forEach (qoute =>{ %>
+        <p>
+            <%= qoute.quote %>
+        </p>
+        <p>
+            <%= qoute.character  %>
+        </p>
+        <p>
+            <%= qoute.image  %>
+        </p>
+        <p>
+            <%= qoute.characterDirection  %>
+        </p>
+<body>
+    <form action="/character/<%=qoute.id%>?_method=put" method="post">
+        <input type="text" name="qoute"  value="<%= qoute.quote %>">
+        <input type="text" name="character"  value="<%= qoute.character  %>">
+        <input type="text" name="image"  value="<%= qoute.image  %>">
+        <input type="text" name="characterDirection"  value=" <%= qoute.characterDirection  %>">
+        <input type="submit" value="you can update here">
+    </form>
+
+    <form action="/character/<%=qoute.id%>?_method=DELETe" method="POST"></form>
+<input type="submit" value="delete here">
+    </form>
+    <%  }) %>
+</body>
+</html>
